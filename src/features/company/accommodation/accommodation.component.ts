@@ -15,9 +15,9 @@ export class AccommodationComponent {
       name: 'Ocean View Suite',
       description: 'Spacious suite with panoramic ocean views, king-size bed, and balcony.',
       images: [
-        'assets/rooms/ocean1.jpg',
-        'assets/rooms/ocean1.jpg',
-        'assets/rooms/ocean1.jpg'
+        'assets/rooms/room1-204-2.jpg',
+        'assets/rooms/room1-204-5.jpg',
+        'assets/rooms/room1-204-4.jpg'
       ],
       currentIndex: 0
     },

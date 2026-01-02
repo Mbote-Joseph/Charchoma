@@ -14,9 +14,9 @@ export class RoomBookingComponent {
     {
       name: 'Ocean View Suite',
       images: [
-        'https://charchoma.com/wp-content/uploads/2025/02/Room1_1600x900.jpg',
-        'https://charchoma.com/wp-content/uploads/2025/02/Pool1600x900.jpg',
-        'https://charchoma.com/wp-content/uploads/2025/02/Room4_1600x900.jpg'
+        'assets/rooms/room1-204-2.jpg',
+        'assets/rooms/room1-204-5.jpg',
+        'assets/rooms/room1-204-4.jpg'
       ],
       selectedImageIndex: 0,
       description: 'A luxurious suite with stunning views of the ocean.'
@@ -24,9 +24,9 @@ export class RoomBookingComponent {
     {
       name: 'Garden Room',
       images: [
-        'https://charchoma.com/wp-content/uploads/2025/02/loungerooms1600x900.jpg',
-        'https://charchoma.com/wp-content/uploads/2025/02/Room2_1600x900.jpg',
-        'https://charchoma.com/wp-content/uploads/2025/02/Room1_1600x900.jpg'
+        'assets/rooms/ocean1.jpg',
+        'assets/rooms/room1-101-1.jpg',
+        'assets/rooms/room1-101-2.jpg'
       ],
       selectedImageIndex: 0,
       description: 'A peaceful room facing the lush garden.'
@@ -34,9 +34,9 @@ export class RoomBookingComponent {
     {
       name: 'Poolside Room',
       images: [
-        'https://charchoma.com/wp-content/uploads/2025/02/Room1_1600x900.jpg',
-        'https://charchoma.com/wp-content/uploads/2025/02/Pool1600x900.jpg',
-        'https://charchoma.com/wp-content/uploads/2025/02/Room4_1600x900.jpg'
+        'assets/rooms/room1-101-3.jpg',
+        'assets/rooms/room1-101-4.jpg',
+        'assets/rooms/room1-101-1.jpg'
       ],
       selectedImageIndex: 0,
       description: 'Just steps away from the refreshing pool.'
@@ -44,9 +44,9 @@ export class RoomBookingComponent {
     {
       name: 'Executive Suite',
       images: [
-        'https://charchoma.com/wp-content/uploads/2025/02/loungerooms1600x900.jpg',
-        'https://charchoma.com/wp-content/uploads/2025/02/Room2_1600x900.jpg',
-        'https://charchoma.com/wp-content/uploads/2025/02/Room1_1600x900.jpg'
+        'assets/rooms/room1-103.jpg',
+        'assets/rooms/room1-103-2.jpg',
+        'assets/rooms/room1-103-1.jpg'
       ],
       selectedImageIndex: 0,
       description: 'Spacious with dedicated work and rest zones.'
@@ -54,9 +54,9 @@ export class RoomBookingComponent {
     {
       name: 'Standard Room',
       images: [
-        'https://charchoma.com/wp-content/uploads/2025/02/Room1_1600x900.jpg',
-        'https://charchoma.com/wp-content/uploads/2025/02/Pool1600x900.jpg',
-        'https://charchoma.com/wp-content/uploads/2025/02/Room4_1600x900.jpg'
+        'assets/rooms/room1-103-3.jpg',
+        'assets/rooms/room1-103-4.jpg',
+        'assets/rooms/room1-103-5.jpg'
       ],
       selectedImageIndex: 0,
       description: 'Comfort and convenience combined.'
@@ -64,9 +64,9 @@ export class RoomBookingComponent {
     {
       name: 'Deluxe Room',
       images: [
-        'https://charchoma.com/wp-content/uploads/2025/02/loungerooms1600x900.jpg',
-        'https://charchoma.com/wp-content/uploads/2025/02/Room2_1600x900.jpg',
-        'https://charchoma.com/wp-content/uploads/2025/02/Room1_1600x900.jpg'
+        'assets/rooms/room1-204.jpg',
+        'assets/rooms/room1-204-2.jpg',
+        'assets/rooms/room1-204-1.jpg'
       ],
       selectedImageIndex: 0,
       description: 'Extra space and premium features.'
@@ -74,9 +74,9 @@ export class RoomBookingComponent {
     {
       name: 'Family Suite',
       images: [
-        'https://charchoma.com/wp-content/uploads/2025/02/Room1_1600x900.jpg',
-        'https://charchoma.com/wp-content/uploads/2025/02/Pool1600x900.jpg',
-        'https://charchoma.com/wp-content/uploads/2025/02/Room4_1600x900.jpg'
+        'assets/rooms/room1-204-5.jpg',
+        'assets/rooms/room1-204-4.jpg',
+        'assets/rooms/room1-204-3.jpg'
       ],
       selectedImageIndex: 0,
       description: 'Perfect for families with kids.'
@@ -84,9 +84,9 @@ export class RoomBookingComponent {
     {
       name: 'Penthouse',
       images: [
-        'https://charchoma.com/wp-content/uploads/2025/02/loungerooms1600x900.jpg',
-        'https://charchoma.com/wp-content/uploads/2025/02/Room2_1600x900.jpg',
-        'https://charchoma.com/wp-content/uploads/2025/02/Room1_1600x900.jpg'
+        'assets/rooms/ocean1.jpg',
+        'assets/rooms/room1-101-1.jpg',
+        'assets/rooms/room1-101-2.jpg'
       ],
       selectedImageIndex: 0,
       description: 'The ultimate luxury experience.'
