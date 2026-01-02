@@ -1,0 +1,39 @@
+<section class="reviews-section">
+  <div class="reviews-track-wrapper">
+    <div class="reviews-track">
+      <!-- Original review list -->
+      <div class="review-card" *ngFor="let review of reviews">
+        <div class="review-header">
+          <img src="assets/entertainment/ocean3.jpg" alt="Profile" class="profile-pic" />
+          <div>
+            <h4>{{ review.name }}</h4>
+            <div class="stars">
+              <span *ngFor="let star of [].constructor(5); let i = index">
+                <i class="star" [class.filled]="i < review.rating">★</i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <p class="comment">"{{ review.comment }}"</p>
+        <span class="time">{{ review.time }}</span>
+      </div>
+
+      <!-- Clone review list for seamless loop -->
+      <div class="review-card" *ngFor="let review of reviews">
+        <div class="review-header">
+          <img src="assets/entertainment/ocean3.jpg" alt="Profile" class="profile-pic" />
+          <div>
+            <h4>{{ review.name }}</h4>
+            <div class="stars">
+              <span *ngFor="let star of [].constructor(5); let i = index">
+                <i class="star" [class.filled]="i < review.rating">★</i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <p class="comment">"{{ review.comment }}"</p>
+        <span class="time">{{ review.time }}</span>
+      </div>
+    </div>
+  </div>
+</section>

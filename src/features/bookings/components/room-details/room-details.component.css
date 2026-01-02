@@ -1,0 +1,219 @@
+/**
+ * Copyright 2025 josephmbote
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+ :host {
+  display: block;
+  background: linear-gradient(to right, #fff 30%, #fdf4f8 70%);
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 16px;
+
+}
+
+.room-details-section {
+  max-width: 960px;
+  margin: auto;
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+  animation: fadeIn 0.8s ease forwards;
+  /* box-shadow: 0 5px 5px #e91e63; */
+}
+
+.animated-header {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #e91e63;
+  animation: slideInTop 1s ease forwards;
+}
+
+.room-desc {
+  text-align: center;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.gallery {
+  margin-bottom: 30px;
+}
+
+.main-img {
+  width: 100%;
+  border-radius: 12px;
+  max-height: 400px;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  animation: zoomIn 1s ease;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.thumbnails img {
+  width: 70px;
+  height: 50px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  transition: transform 0.3s, border-color 0.3s;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.thumbnails img.active,
+.thumbnails img:hover {
+  border-color: #e91e63;
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.booking-form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.booking-form input,
+.booking-form select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: box-shadow 0.3s;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.2);
+}
+
+.btn-book {
+  margin-top: 10px;
+  padding: 12px 24px;
+  background-color: #e91e63;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-book:hover {
+  background-color: #c2185b;
+}
+
+.total-cost {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.total-cost h3 {
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.total-cost span {
+  color: #e91e63;
+  font-weight: bold;
+}
+
+/* ---------------- Animations ---------------- */
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-delay {
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+.zoom-in {
+  animation: zoomIn 0.8s ease;
+}
+
+.slide-in-up {
+  animation: slideInBottom 1s ease forwards;
+}
+
+.slide-up-smooth {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0 }
+  to { transform: scale(1); opacity: 1 }
+}
+
+@keyframes slideInTop {
+  from { transform: translateY(-30px); opacity: 0 }
+  to { transform: translateY(0); opacity: 1 }
+}
+
+@keyframes slideInBottom {
+  from { transform: translateY(40px); opacity: 0 }
+  to { transform: translateY(0); opacity: 1 }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0 }
+  to { transform: translateY(0); opacity: 1 }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .room-details-section {
+    padding: 20px;
+  }
+
+  .main-img {
+    max-height: 250px;
+  }
+
+  .thumbnails {
+    flex-wrap: wrap;
+  }
+}
+
+
+.error-message {
+  background-color: #ffe5e5;
+  border: 1px solid #e91e63;
+  padding: 12px;
+  border-radius: 6px;
+  color: #e91e63;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}

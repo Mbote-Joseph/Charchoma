@@ -1,0 +1,142 @@
+/**
+ * Copyright 2025 josephmbote
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+ .drinks-section {
+  background-color: #000;
+  color: white;
+  padding: 80px 30px;
+}
+
+.drinks-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: auto;
+  align-items: center;
+  gap: 40px;
+}
+
+.drinks-text {
+  flex: 1 1 50%;
+  text-align: center;
+}
+
+.drinks-text h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.underline {
+  width: 120px;
+  height: 2px;
+  background-color: #c1292e;
+  margin: 0 auto 30px;
+}
+
+.drinks-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.menu-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #d6b36d;
+  color: #111;
+  font-weight: bold;
+  padding: 10px 26px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.menu-btn:hover {
+  background-color: #cfa556;
+}
+
+/* Carousel */
+.drinks-carousel {
+  flex: 1 1 45%;
+  position: relative;
+  max-width: 600px;
+  text-align: center;
+}
+
+.carousel-image {
+  position: relative;
+}
+
+.carousel-image img {
+  width: 80%;
+  border-radius: 10px;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  font-size: 28px;
+  color: white;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+}
+
+.carousel-control.left {
+  left: 10px;
+}
+
+.carousel-control.right {
+  right: 10px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #888;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .drinks-container {
+    flex-direction: column;
+  }
+
+  .drinks-text {
+    text-align: center;
+  }
+}

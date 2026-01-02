@@ -1,0 +1,33 @@
+<section class="booking-section">
+  <h2 class="section-title">Our Rooms</h2>
+
+  <div class="room-grid">
+    <div class="room-card" *ngFor="let room of rooms; let i = index">
+      <h3>{{ room.name }}</h3>
+
+      <div class="main-image-container">
+        <img
+          [src]="room.images[room.selectedImageIndex]"
+          [alt]="room.name"
+          class="main-image"
+        />
+      </div>
+
+      <div class="thumbnails">
+        <img
+          *ngFor="let img of room.images; let j = index"
+          [src]="img"
+          [alt]="room.name + ' view ' + j"
+          [class.active]="j === room.selectedImageIndex"
+          (click)="selectImage(i, j)"
+        />
+      </div>
+
+      <p class="description">{{ room.description }}</p>
+
+      <a [routerLink]="['/bookings/room-details', i]" class="btn-primary">
+        Book {{ room.name }}
+      </a>
+    </div>
+  </div>
+</section>

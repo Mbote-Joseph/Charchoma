@@ -1,0 +1,215 @@
+/**
+ * Copyright 2025 josephmbote
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+ .accommodation-section {
+  background-color: #fff;
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  color: #222;
+}
+
+.section-title::after {
+  content: '';
+  width: 100px;
+  height: 3px;
+  background-color: #e91e63;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+
+/* .room-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 80px;
+  gap: 50px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 50px;
+  animation: fadeInUp 0.7s ease-in-out both;
+} */
+
+.room-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+
+.image-preview {
+  flex: 1 1 55%;
+  position: relative;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.main-image:hover {
+  transform: scale(1.02);
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.thumbnails img {
+  width: 72px;
+  height: 54px;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.thumbnails img.active,
+.thumbnails img:hover {
+  opacity: 1;
+  border-color: #e91e63;
+  box-shadow: 0 0 6px rgba(233, 30, 99, 0.4);
+}
+
+.room-details {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.room-details h3 {
+  font-size: 1.8rem;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.room-details p {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+
+/* Flex grid layout */
+.room-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px 40px;
+  justify-content: space-between;
+}
+
+/* Room card flex structure */
+.room-container {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  padding: 10px;
+  width: calc(50% - 40px); /* Two columns with spacing */
+  transition: transform 0.3s ease;
+}
+
+.room-container:hover {
+  transform: translateY(-5px);
+}
+
+.rooms-button{
+  background-color: #e91e63;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius:20px;
+  transition: background-color 0.3s ease;
+  :hover { background-color: #d81b60; }
+  &:hover { background-color: #d81b60; }
+  max-width: 150px;
+}
+
+/* Responsive: Stack on small screens */
+@media (max-width: 768px) {
+  .room-container {
+    width: 100%;
+  }
+}
+
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .room-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .image-preview,
+  .room-details {
+    flex: 1 1 100%;
+  }
+
+  .main-image {
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  .thumbnails {
+    justify-content: center;
+  }
+
+  .thumbnails img {
+    width: 60px;
+    height: 45px;
+  }
+
+  .room-details h3 {
+    font-size: 1.6rem;
+  }
+}

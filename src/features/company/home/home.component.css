@@ -1,0 +1,517 @@
+/**
+ * Copyright 2025 josephmbote
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+ :host {
+  display: block;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+/* Shared Button Styles */
+.btn, .btn-outline, .btn-link {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn {
+  background: #e91e63;
+  color: #fff;
+}
+.btn:hover {
+  background: #c2185b;
+}
+.btn-outline {
+  border: 2px solid #e91e63;
+  color: #e91e63;
+}
+.btn-outline:hover {
+  background: #e91e63;
+  color: #fff;
+}
+.btn-link {
+  color: #e91e63;
+  font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 60px 30px;
+  background: #111;
+  color: #fff;
+}
+.hero-left, .hero-right {
+  flex: 1 1 40%;
+  padding: 20px;
+}
+.hero-left h1 {
+  font-size: 4.5rem;
+  margin-bottom: 10px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.hero-left h2 {
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+.hero-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.hero-right img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Grill Section */
+.grill-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+.grill-section h2 {
+  font-size: 2rem;
+}
+.grill-section p {
+  max-width: 800px;
+  margin: 10px auto 40px;
+}
+
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.review-card {
+  background: #111;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1 1 220px;
+  max-width: 280px;
+}
+
+/* Events Section */
+.events-section {
+  background: url('/assets/events-bg.jpg') center/cover no-repeat;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+}
+.events-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+.event-card {
+  background: rgba(0,0,0,0.7);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+}
+.event-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.event-card h4 {
+  margin: 10px 0 4px;
+  font-size: 1.2rem;
+}
+
+/* Animations */
+.fade-in-left {
+  animation: fadeInLeft 1s ease forwards;
+}
+.fade-in-right {
+  animation: fadeInRight 1s ease forwards;
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .hero-left, .hero-right {
+    flex: 1 1 100%;
+  }
+  .events-grid, .reviews {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.farm-to-grill-section {
+  background-color: #fff; /* matches the screenshot background */
+  padding: 60px 30px;
+  min-height: 350px;
+}
+
+.farm-to-grill-section .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-content {
+  flex: 1 1 400px;
+  color: #111;
+  max-width: 20%;
+
+}
+
+.text-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.text-content h4 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.text-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #e91e63;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #e91e63;
+}
+
+.image-group {
+  position: relative;
+  flex: 1 1 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-main {
+  max-width:60%;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  position: relative;
+  margin-left: -350px;
+}
+
+.image-float {
+  position: absolute;
+  right: -10px;
+  /* bottom: -70px; */
+  width: 100%;
+  z-index: 1;
+  animation: floatIn 1.2s ease-out forwards;
+  height: 140%;
+  width: 73%;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .farm-to-grill-section .content {
+    flex-direction: column;
+  }
+
+  .image-group {
+    flex-direction: column;
+  }
+
+  .image-float {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin-top: 20px;
+  }
+
+  .read-more-btn {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
+
+.headline-underline {
+  width: 0;
+  height: 2px;
+  margin: 0 auto;
+  background-color: #e91e63;
+  animation: expandLine 1s ease-out forwards;
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 120px;
+  }
+}
+
+
+.headline-underline1 {
+  width: 0;
+  height: 2px;
+  margin: 0;
+  background-color: #e91e63;
+  animation: expandLine 1s ease-out forwards;
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 120px;
+  }
+}
+
+
+.section-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* HERO SECTION */
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5vw;
+  background: #111;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.hero-left, .hero-right {
+  flex: 1 1 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.hero-left h1 {
+  font-size: clamp(2rem, 6vw, 4.5rem); /* Responsive font */
+  margin-bottom: 12px;
+  font-family: Cambria, serif;
+}
+
+.hero-left p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
+.hero-right img {
+  width: 100%;
+  height: auto;
+  max-width: 420px;
+  margin: auto;
+  display: block;
+}
+
+/* FARM TO GRILL SECTION */
+.farm-to-grill-section {
+  background-color: #fff;
+  padding: 6vw 5vw;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.farm-to-grill-section .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.text-content {
+  flex: 1 1 40%;
+  max-width: 400px;
+}
+
+.text-content h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.text-content h4 {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: #444;
+  margin-bottom: 18px;
+}
+
+.text-content p {
+  font-size: clamp(1rem, 2.3vw, 1.1rem);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #e91e63;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #d81b60;
+}
+
+.image-group {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image-main {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.image-float {
+  position: absolute;
+  bottom: -40px;
+  /* right: -100px; */
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  animation: floatIn 1s ease-out;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-left, .hero-right {
+    flex: 1 1 100%;
+  }
+
+  .farm-to-grill-section .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-float {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 280px;
+  }
+}
+
+.headline-underline1 {
+  height: 2px;
+  width: 120px;
+  background-color: #e91e63;
+  animation: expandLine 1s ease-out forwards;
+  margin: 0; /* Default: left-aligned */
+}
+
+/* Center only on small screens */
+@media (max-width: 768px) {
+  .headline-underline1 {
+    margin: 0 auto;
+  }
+}

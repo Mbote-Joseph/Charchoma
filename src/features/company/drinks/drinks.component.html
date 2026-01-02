@@ -1,0 +1,39 @@
+<section class="drinks-section">
+  <div class="drinks-container">
+
+    <!-- Left: Text Content -->
+    <div class="drinks-text">
+      <h2>Purchase Drinks at CharChoma-Fresh</h2>
+      <div class="underline"></div>
+      <p>
+        Wether its morning mimosas, refreshing cocktails, or a classic African Dowa sipped as a sundowner at dusk.
+        Let our mixologists and bar team shake you up something fresh and tasty and learn to enjoy life one cocktail at a time.
+      </p>
+      <p>
+        Or choose to indulge in our new wine cave and experience here at Char Choma. With our expert sommeliers on hand to guide you through
+        our extensive list, featuring some of the finest wines from all over the world.
+        A unique concept new to the coast of Mombasa.
+      </p>
+      <a class="menu-btn" routerLink="/ecommerce">Menu</a>
+    </div>
+
+    <!-- Right: Carousel -->
+    <div class="drinks-carousel">
+      <div class="carousel-image">
+        <img [src]="drinkImages[currentIndex]" alt="Drink Experience">
+        <button class="carousel-control left" (click)="prevImage()">&#10094;</button>
+        <button class="carousel-control right" (click)="nextImage()">&#10095;</button>
+      </div>
+
+      <div class="carousel-dots">
+        <span
+          class="dot"
+          *ngFor="let img of drinkImages; let i = index"
+          [class.active]="i === currentIndex"
+          (click)="goToImage(i)">
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>

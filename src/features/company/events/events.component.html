@@ -1,0 +1,19 @@
+<section class="events-section">
+  <h2 class="events-title">Upcoming Events</h2>
+
+  <div class="events-list">
+    <div class="event-card" *ngFor="let event of events">
+      <div class="event-img">
+        <img [src]="event.image" [alt]="event.name" />
+      </div>
+
+      <div class="event-details">
+        <div class="event-date">{{ formatDate(event.date) }}</div>
+        <div class="event-content">
+          <h3>{{ event.name }}</h3>
+          <p>{{ event.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

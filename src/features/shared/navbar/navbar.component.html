@@ -1,0 +1,41 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="brand">
+      <a routerLink="/"><img src="assets/images/Logo.png" alt="Logo" height="70px"></a>
+    </div>
+
+    <!-- Hamburger Button -->
+    <button class="hamburger" (click)="menuOpen = !menuOpen">
+      ☰
+    </button>
+
+    <!-- Menu -->
+    <ul class="nav-links" [class.active]="menuOpen">
+      <li><a routerLink="/ecommerce" (click)="closeMobileMenu()">Shop</a></li>
+      <li><a routerLink="/orders" (click)="closeMobileMenu()">My Orders</a></li>
+
+      <!-- Bookings Dropdown with ▾ marker -->
+      <li class="dropdown">
+        <a href="javascript:void(0)" (click)="toggleDropdown('bookings')">Bookings ▾</a>
+        <ul class="dropdown-menu" *ngIf="activeDropdown === 'bookings'">
+          <li><a routerLink="/bookings/room-booking" (click)="closeMobileMenu()">Room Booking</a></li>
+          <li><a routerLink="/bookings/table-reservation" (click)="closeMobileMenu()">Table Reservation</a></li>
+          <li><a routerLink="/bookings/ocean-experience" (click)="closeMobileMenu()">Ocean Experience</a></li>
+        </ul>
+      </li>
+
+      <!-- Dashboard Dropdown with ▾ marker -->
+      <li class="dropdown">
+        <a href="javascript:void(0)" (click)="toggleDropdown('dashboard')">Dashboard ▾</a>
+        <ul class="dropdown-menu" *ngIf="activeDropdown === 'dashboard'">
+          <li><a routerLink="/dashboard/admin-home" (click)="closeMobileMenu()">Admin Home</a></li>
+          <li><a routerLink="/dashboard/sales-chart" (click)="closeMobileMenu()">Sales Chart</a></li>
+          <li><a routerLink="/dashboard/top-products" (click)="closeMobileMenu()">Top Products</a></li>
+        </ul>
+      </li>
+
+      <li><a routerLink="/loyalty" (click)="closeMobileMenu()">Loyalty</a></li>
+      <li><a routerLink="/auth/login" (click)="closeMobileMenu()">Login</a></li>
+    </ul>
+  </div>
+</nav>

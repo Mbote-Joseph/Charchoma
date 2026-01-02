@@ -1,0 +1,29 @@
+<div class="ecommerce-layout">
+  <!-- Sidebar Filter -->
+  <aside class="sidebar">
+    <h3>Filters</h3>
+
+    <label>Category</label>
+    <select [(ngModel)]="filters.type">
+      <option value="">All</option>
+      <option value="Meal">Meals</option>
+      <option value="Drink">Drinks</option>
+    </select>
+
+    <label>Min Price</label>
+    <input type="number" [(ngModel)]="filters.minPrice" />
+
+    <label>Max Price</label>
+    <input type="number" [(ngModel)]="filters.maxPrice" />
+  </aside>
+
+  <!-- Product Grid -->
+  <main class="product-grid">
+    <div class="product-card" *ngFor="let product of filteredProducts">
+      <img [src]="product.image" [alt]="product.name" />
+      <h4>{{ product.name }}</h4>
+      <p>KES {{ product.price }}</p>
+      <a [routerLink]="['/ecommerce/product', product.id]" class="btn-outline">View</a>
+    </div>
+  </main>
+</div>

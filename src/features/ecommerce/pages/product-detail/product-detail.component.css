@@ -1,0 +1,154 @@
+/**
+ * Copyright 2025 josephmbote
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+ .product-detail-wrapper {
+  background-color: #fff;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.product-card {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+  background-color: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.product-image {
+  flex: 1 1 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+  flex: 1 1 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.product-info h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.product-info .price {
+  font-size: 1.5rem;
+  color: #e91e63;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.product-info .description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.btn-primary {
+  background-color: #e91e63;
+  color: #fff;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #c2185b;
+}
+
+.btn-outline {
+  padding: 10px 24px;
+  border: 2px solid #e91e63;
+  color: #e91e63;
+  background: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: #e91e63;
+  color: white;
+}
+
+.not-found {
+  padding: 60px;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #e91e63;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .product-card {
+    flex-direction: column;
+  }
+
+  .product-info,
+  .product-image {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .product-info h1 {
+    font-size: 1.6rem;
+  }
+
+  .product-info .price {
+    font-size: 1.3rem;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+}

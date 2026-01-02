@@ -1,0 +1,142 @@
+/**
+ * Copyright 2025 josephmbote
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+ .booking-section {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.room-card {
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 20px;
+  text-align: center;
+}
+
+.room-card h3 {
+  color: #e91e63;
+  margin-bottom: 15px;
+}
+
+.main-image-container {
+  margin-bottom: 12px;
+}
+
+.main-image {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.thumbnails img {
+  width: 60px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s;
+  border: 2px solid transparent;
+}
+
+.thumbnails img.active,
+.thumbnails img:hover {
+  opacity: 1;
+  border-color: #e91e63;
+  box-shadow: 0 0 6px rgba(233, 30, 99, 0.3);
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 15px 0;
+}
+
+.btn-primary {
+  background-color: #e91e63;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+ a:-webkit-any-link {
+  text-decoration: none;
+
+}
+
+
+
+.btn-primary:hover {
+  background-color: #c2185b;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .room-card {
+    padding: 16px;
+  }
+
+  .main-image {
+    max-height: 180px;
+  }
+
+  .thumbnails img {
+    width: 50px;
+    height: 40px;
+  }
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  color: #222;
+}
+
+.section-title::after {
+  content: '';
+  width: 100px;
+  height: 3px;
+  background-color: #e91e63;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}

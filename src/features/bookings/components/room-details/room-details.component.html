@@ -1,0 +1,45 @@
+<section class="room-details-section fade-in" *ngIf="room">
+  <h2 class="animated-header">{{ room.name }}</h2>
+  <p class="room-desc">{{ room.description }}</p>
+
+  <!-- Image Gallery -->
+  <div class="gallery">
+    <img [src]="room.images[selectedImageIndex]" class="main-img zoom-in" />
+
+    <div class="thumbnails fade-in-delay">
+      <img
+        *ngFor="let img of room.images; let i = index"
+        [src]="img"
+        [class.active]="i === selectedImageIndex"
+        (click)="selectImage(i)"
+      />
+    </div>
+  </div>
+
+  <form class="booking-form slide-in-up" (ngSubmit)="submitBooking()" #formRef="ngForm">
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+
+    <label>Start Date</label>
+    <input type="date" [(ngModel)]="form.startDate" name="startDate" required />
+
+    <label>End Date</label>
+    <input type="date" [(ngModel)]="form.endDate" name="endDate" required />
+
+    <label>Adults (Max 2)</label>
+    <input type="number" [(ngModel)]="form.adults" name="adults" min="1" max="2" required />
+
+    <label>Kids under 10 (Max 2)</label>
+    <input type="number" [(ngModel)]="form.kids" name="kids" min="0" max="2" />
+
+    <label>Meal Plan</label>
+    <select [(ngModel)]="form.mealPlan" name="mealPlan" required>
+      <option value="Full">Full</option>
+      <option value="Half">Half</option>
+      <option value="Breakfast">Breakfast</option>
+    </select>
+
+    <button class="btn-book" type="submit">Confirm Booking</button>
+  </form>
+
