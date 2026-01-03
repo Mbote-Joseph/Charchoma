@@ -22,7 +22,7 @@
     <div class="product-card" *ngFor="let product of filteredProducts">
       <img [src]="product.image" [alt]="product.name" />
       <h4>{{ product.name }}</h4>
-      <p>KES {{ product.price }}</p>
+      <!-- <p>KES {{ product.price }}</p> -->
       <a [routerLink]="['/ecommerce/product', product.id]" class="btn-outline">View</a>
     </div>
   </main>
