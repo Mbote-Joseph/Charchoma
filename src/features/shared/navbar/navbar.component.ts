@@ -9,6 +9,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+
+  logoUrl: any = 'images/Logo.png'
   menuOpen = false;
   activeDropdown: string | null = null;
 
